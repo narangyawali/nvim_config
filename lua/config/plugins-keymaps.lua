@@ -48,3 +48,15 @@ vim.keymap.set("n", "[c", function()
   require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = false,desc="go to context" })
 
+
+-- harapoon keymap 
+vim.keymap.set("n", "hx", ":lua require('harpoon.mark').add_file()<CR>", { desc = "harpoon mark file" })
+vim.keymap.set("n", "ht", ":lua require('harpoon.mark').toggle_file()<CR>", { desc = "harpoon mark toggle" })
+vim.keymap.set("n", "hn",":lua require('harpoon.ui').nav_next()<CR>", { desc = "harpoon next file" })
+vim.keymap.set("n", "hp",":lua require('harpoon.ui').nav_prev()<CR>", { desc = "harpoon prev file" })
+vim.api.nvim_set_keymap(
+	"n",
+	"hm",
+	":Telescope harpoon marks<CR>",
+	{ noremap = true, silent = false, desc = "Telescope harpoon marks" }
+)

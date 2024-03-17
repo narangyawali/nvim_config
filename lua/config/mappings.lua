@@ -23,6 +23,7 @@ vim.api.nvim_set_keymap("v" , '<Space>y', '"+y', { noremap = true, silent = fals
 
 -- Paste from clipboard in normal mode
 vim.api.nvim_set_keymap('n', '<Space>p', '"+p', { noremap = true, silent = false , desc ="paste from system clipboard" })
+vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true, silent = false , desc ="delete single character in _ reg" })
 
 -- Normal mode mapping: <C-s> to save the file
 --	vim.api.nvim_set_keymap({"n","i"}, '<C-s>', ':w<CR>', { silent = false })
@@ -46,13 +47,12 @@ vim.api.nvim_set_keymap('c', 'vh', 'vertical :h ', { noremap = true, silent = fa
 -- Vertical split
 vim.api.nvim_set_keymap('n', '<Space>vw', ':vert split<CR>', { noremap = true, silent = false,desc="split window vertically same buffer" })
 
--- Vertical resize with Ctrl + Left/Right
-vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -5<CR>', { noremap = true, silent = false })
-vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +5<CR>', { noremap = true, silent = false })
 
 -- Vertical resize with Alt + Left/Right
 vim.api.nvim_set_keymap('n', '<A-Left>', ':vertical resize -5<CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<A-Right>', ':vertical resize +5<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<A-Up>', ':horizontal resize +5<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<A-Down>', ':horizontal resize -5<CR>', { noremap = true, silent = false })
 
 -- Switch to next and previous buffers
 vim.api.nvim_set_keymap('n', '<Space>n', ':bnext<CR>', { noremap = true, silent = false,desc="next buffer" })
