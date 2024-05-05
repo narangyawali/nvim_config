@@ -66,3 +66,6 @@ vim.api.nvim_set_keymap('n', '<Space>t', ':tabnext<CR>', { noremap = true, silen
 vim.api.nvim_set_keymap('n', '<Space>o', ':tabprevious<CR>', { noremap = true, silent = false, desc="previous Tab" })
 
 
+-- vim diagnostic
+-- vim.api.nvim_set_keymap('n','<Space>ved','lua vim.diagnostic.disable()<CR>',{noremap = true,silent= false,desc="disable vim diagnostic"})
+-- vim.api.nvim_set_keymap('n','<Space>vee','lua vim.diagnostic.enable()<CR>',{noremap = true,silent= false,desc="disable vim enable"})

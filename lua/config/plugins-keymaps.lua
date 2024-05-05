@@ -50,13 +50,13 @@ end, { silent = false,desc="go to context" })
 
 
 -- harapoon keymap 
-vim.api.nvim_set_keymap("n", "hx", ":lua require('harpoon.mark').add_file()<CR>", { desc = "harpoon mark file" })
-vim.api.nvim_set_keymap("n", "ht", ":lua require('harpoon.mark').toggle_file()<CR>", { desc = "harpoon mark toggle" })
-vim.api.nvim_set_keymap("n", "hn",":lua require('harpoon.ui').nav_next()<CR>", { desc = "harpoon next file" })
-vim.api.nvim_set_keymap("n", "hp",":lua require('harpoon.ui').nav_prev()<CR>", { desc = "harpoon prev file" })
+vim.api.nvim_set_keymap("n", "hpx", ":lua require('harpoon.mark').add_file()<CR>", { desc = "harpoon mark file" })
+vim.api.nvim_set_keymap("n", "hpt", ":lua require('harpoon.mark').toggle_file()<CR>", { desc = "harpoon mark toggle" })
+vim.api.nvim_set_keymap("n", "hpn",":lua require('harpoon.ui').nav_next()<CR>", { desc = "harpoon next file" })
+vim.api.nvim_set_keymap("n", "hpp",":lua require('harpoon.ui').nav_prev()<CR>", { desc = "harpoon prev file" })
 vim.api.nvim_set_keymap(
 	"n",
-	"hm",
+	"hpm",
 	":Telescope harpoon marks<CR>",
 	{ noremap = true, silent = false, desc = "Telescope harpoon marks" }
 )
