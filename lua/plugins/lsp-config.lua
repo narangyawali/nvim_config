@@ -38,10 +38,10 @@ return {{
 			lspconfig.cssls.setup({
 				capabilities= capabilities
 			})
-			lspconfig.cssmodule_ls.setup({
-
-				capabilities= capabilities
-			})
+			-- lspconfig.cssmodule_ls.setup({
+			--
+			-- 	capabilities= capabilities
+			-- })
 			vim.keymap.set("n","K", vim.lsp.buf.hover,{desc="lsp hover"})
 			vim.keymap.set('n', 'D', vim.lsp.buf.type_definition, {desc="lsp type defination"})
 		    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {desc="lsp go to defination"})

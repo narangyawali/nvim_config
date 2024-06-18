@@ -13,7 +13,7 @@ vim.o.relativenumber = true
 -- Show mode and command in the status line
 vim.o.showmode = true
 vim.o.showcmd = true
-vim.o.setnowrap = true
+--vim.o.setnowrap = true
 vim.o.linebreak = true
 -- vim.o.wrap= true
 vim.opt.smartindent = true
@@ -43,7 +43,7 @@ vim.o.hidden = true
 vim.o.termguicolors = true
 
 -- Set the number of colors
-vim.o.t_Co = 256
+-- vim.o.t_Co = 256
 -- Always show the file name in the status line
 vim.o.laststatus = 2
 vim.opt.scrolloff = 2
