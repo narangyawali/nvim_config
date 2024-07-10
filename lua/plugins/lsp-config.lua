@@ -38,6 +38,13 @@ return {{
 			lspconfig.cssls.setup({
 				capabilities= capabilities
 			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities
+			})
+			lspconfig.csharp_ls.setup({
+				capabilities = capabilities
+
+			})
 			-- lspconfig.cssmodule_ls.setup({
 			--
 			-- 	capabilities= capabilities

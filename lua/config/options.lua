@@ -55,3 +55,6 @@ vim.g.netrw_bufsettings="noma nomod nonu nobl nowrap ro rnu"
 -- Save and load sessions
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,options,tabpages,winsize"
 
+-- to remove ^M 
+-- vim.cmd [[autocmd BufReadPost * :%s/\r//g]]
+--:set ff=unix

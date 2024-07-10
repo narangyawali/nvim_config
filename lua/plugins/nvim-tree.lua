@@ -7,7 +7,11 @@ return {
   },
   config = function()
     require("nvim-tree").setup {
-			view= {relativenumber= true}
+			view= {
+				relativenumber= true,
+				adaptive_size= true
+			}
+
 		}
   end,
 }

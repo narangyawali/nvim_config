@@ -13,6 +13,7 @@ vim.api.nvim_set_keymap('n','<Space>s',':NvimTreeToggle<CR>',{noremap= true, sil
 vim.api.nvim_set_keymap('n','<Space>a',':UndotreeToggle<CR>',{noremap= true, silent= false, desc="toggle Undotree"})
 
 vim.api.nvim_set_keymap('n', '<F8>', ':lua ToggleVista()<CR>', { noremap = false, silent = false ,desc=" toggle vista.vim tagbar" })
+vim.api.nvim_set_keymap('n', '<Space>;', ':lua ToggleVista()<CR>', { noremap = false, silent = false ,desc=" toggle vista.vim tagbar" })
 
 -- fine cmd
 vim.api.nvim_set_keymap('n', 'cc', '<cmd>FineCmdline<CR>', {noremap = true, silent=false,desc ="fine cmdLine"})
