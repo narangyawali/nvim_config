@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap('n', '<Space>p', '"+p', { noremap = true, silent = false
 vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true, silent = false , desc ="delete single character in _ reg" })
 
 -- doubel semicolone to quit window
--- vim.api.nvim_set_keymap('n', ';;', ':wq<CR>', { noremap = true, silent = false , desc ="save and quit" })
+vim.api.nvim_set_keymap('n', ';;', ':q<CR>', { noremap = true, silent = false , desc =" just quit" })
 
 -- Normal mode mapping: <C-s> to save the file
 --	vim.api.nvim_set_keymap({"n","i"}, '<C-s>', ':w<CR>', { silent = false })

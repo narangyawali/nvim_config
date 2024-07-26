@@ -17,11 +17,23 @@ return {{
 		config= function()
 			local capabilities= require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require('lspconfig')
+			local vue_language_server_path="/usr/local/lib/node_modules/@vue/language-server/"
+			local vue_language_server_path2="/usr/local/lib/node_modules/@volar/vue-language-server/"
 			lspconfig.lua_ls.setup({
 				capabilities= capabilities
 			})
 			lspconfig.tsserver.setup({
-				capabilities= capabilities
+				capabilities= capabilities,
+				init_options = {
+					plugins = {
+						{
+							name = '@vue/typescript-plugin',
+							location = vue_language_server_path,
+							languages = { 'vue' },
+						},
+					},
+				},
+				filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
 			})
 			lspconfig.eslint.setup({
 				settings = {
@@ -44,6 +56,10 @@ return {{
 			lspconfig.csharp_ls.setup({
 				capabilities = capabilities
 
+			})
+			lspconfig.volar.setup({
+				filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+				capabilities = capabilities
 			})
 			-- lspconfig.cssmodule_ls.setup({
 			--
