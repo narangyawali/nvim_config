@@ -69,3 +69,6 @@ vim.api.nvim_set_keymap('n', '<Space>o', ':tabprevious<CR>', { noremap = true, s
 -- vim diagnostic
 vim.api.nvim_set_keymap('n','<Space>ved','lua vim.diagnostic.disable()<CR>',{noremap = true,silent= false,desc="disable vim diagnostic"})
 vim.api.nvim_set_keymap('n','<Space>vee','lua vim.diagnostic.enable()<CR>',{noremap = true,silent= false,desc="disable vim enable"})
+
+-- vim.api.nvim_set_keymap('n','<Space>dtu',':%s/\r//g<CR>',{noremap= true,silent= false,desc="remove ^M from end of line,aka:"})
+vim.api.nvim_set_keymap('n','<Space>dtu',':! dos2unix % <CR>',{noremap= true,silent= false,desc="remove ^M from end of line,aka:"})
