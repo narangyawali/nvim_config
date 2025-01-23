@@ -9,6 +9,6 @@ return {
 	--	notification= false
 	},
 	config = function(_,opts)
-		require("hardtime").setup(opts)
+		-- require("hardtime").setup(opts)
 	end,
 }
