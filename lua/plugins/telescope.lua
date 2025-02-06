@@ -18,6 +18,14 @@ return {
 			vim.keymap.set("n", "<Space>fg", builtin.live_grep, { desc = "live_grep" })
 			vim.keymap.set("n", "<Space>fb", builtin.buffers, { desc = " find buffers" })
 			vim.keymap.set("n", "<Space>fh", builtin.help_tags, { desc = "help_tags" })
+			-- vim.keymap.set("n", "<Space>fd", builtin.lsp_definitions , { desc = "find definition" })
+
+			vim.keymap.set("n", "<Space>fd", function()
+				builtin.lsp_definitions({ theme = "dropdown",
+					jump_type = "never", -- Prevents automatic jumping
+					-- fname_width = 80,    -- Adjust the width of the filename column
+				}) -- Shows definitions in a Telescope window
+			end, { desc = "find definition " })
 
 		end,
 	},
